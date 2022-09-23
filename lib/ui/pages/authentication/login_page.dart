@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
+import 'package:f_shared_prefs_template/ui/pages/home/content.dart';
 import '../../controllers/authentication_controller.dart';
 import 'signup_page.dart';
 
@@ -84,6 +84,7 @@ class _LoginPageState extends State<LoginPage> {
                             if (value) {
                               ScaffoldMessenger.of(context).showSnackBar(
                                   const SnackBar(content: Text('User ok')));
+                              Get.to(() => const Content());
                             } else {
                               ScaffoldMessenger.of(context).showSnackBar(
                                   const SnackBar(
